@@ -41,6 +41,79 @@ The following Kubernetes resource types are covered in this repository:
 - **PersistentVolume (PV) and PersistentVolumeClaim (PVC)**: Provides persistent storage for pods.  
 - **RBAC (Role-Based Access Control)**: Configures permissions and access control within the cluster.
 
+## How to Set Up and Use Devbox
+
+### Install Devbox
+
+Devbox is a CLI tool that helps you create and manage isolated development environments.  
+To install Devbox, run the following command:  
+
+```bash
+curl -fsSL https://get.jetpack.io/devbox | bash
+```
+
+Alternatively, you can use Homebrew:  
+
+```bash
+brew install jetpack-io/devbox/devbox
+```
+
+For more installation options, visit the [Devbox documentation](https://jetpack.io/devbox/docs/installation/).
+
+### Start a Devbox Shell
+
+Once `devbox` is installed and the `devbox.json` file is present in the project root, you can start a Devbox shell:  
+
+```bash
+devbox shell
+```
+
+This command loads the development environment with all the packages and tools specified in `devbox.json`.
+
+---
+
+### Examples of Useful Commands
+
+Once inside the Devbox shell, you can run commands for the tools included in your `devbox.json`. Here are some examples:
+
+#### **`kubectl` Commands**
+- **View all pods in a namespace:**  
+  ```bash
+  kubectl get pods -n <namespace>
+  ```
+- **Apply a configuration file:**  
+  ```bash
+  kubectl apply -f <file.yaml>
+  ```
+- **Delete a resource (e.g., a pod):**  
+  ```bash
+  kubectl delete pod <pod-name> -n <namespace>
+  ```
+- **Describe a resource:**  
+  ```bash
+  kubectl describe <resource-type> <resource-name> -n <namespace>
+  ```
+
+#### **`kubectx` Commands**
+- **Switch between Kubernetes clusters:**  
+  ```bash
+  kubectx <cluster-name>
+  ```
+- **List all available contexts:**  
+  ```bash
+  kubectx
+  ```
+
+#### **`kind`**
+- **Create a local Kubernetes cluster:**  
+  ```bash
+  kind create cluster --name <cluster-name>
+  ```
+- **Delete a Kind cluster:**  
+  ```bash
+  kind delete cluster --name <cluster-name>
+  ```
+
 ## Out of Scope
 
 The following resource types are not covered in detail but may be explored later:  
