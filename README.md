@@ -1,6 +1,6 @@
 # Kubernetes Resource Types
 
-This repository provides hands-on examples for working with Kubernetes' built-in resource types, catering to diverse application deployment and operational needs.
+This repository provides hands-on for working with Kubernetes' built-in resource types, catering to diverse application deployment and operational needs.
 
 ## Overview
 
