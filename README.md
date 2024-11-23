@@ -49,7 +49,7 @@ Devbox is a CLI tool that helps you create and manage isolated development envir
 To install Devbox, run the following command:  
 
 ```bash
-curl -fsSL https://get.jetpack.io/devbox | bash
+curl -fsSL https://get.jetify.com/devbox | bash
 ```
 
 Alternatively, you can use Homebrew:  
@@ -58,7 +58,7 @@ Alternatively, you can use Homebrew:
 brew install jetpack-io/devbox/devbox
 ```
 
-For more installation options, visit the [Devbox documentation](https://jetpack.io/devbox/docs/installation/).
+For more installation options, visit the [Devbox documentation](https://www.jetify.com/docs/devbox/installing_devbox/).
 
 ### Start a Devbox Shell
 
